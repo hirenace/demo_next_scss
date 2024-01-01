@@ -19,7 +19,7 @@ const Home = () => {
         <div className={'home-container'}>
             <Header />
             <main className={"main"}>
-                <div className={'content-wrapper'}>
+                <div className={'div-center content-wrapper'}>
                     <div className={"card"}>
                         <h1 className={'card-title'}>Welcome to the Home Page</h1>
                         <p className={'card-text'}>Explore amazing content and discover new things!</p>

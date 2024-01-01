@@ -10,6 +10,15 @@
 // Include our auth styles
 @import 'auth.scss';
 
+html, body {
+  height: 100%;
+}
+
+// Optional: Apply a global box-sizing rule
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-size: $bs-body-font-size;
@@ -59,6 +68,14 @@ main {
   color: $error-color; // Use your desired error message color
   margin-top: 1rem;
   text-align: center;
+}
+
+.div-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
 }
 
 .centered-container {
