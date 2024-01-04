@@ -6,7 +6,11 @@ import Footer from '../src/components/layout/footer';
 const Home = () => {
 
     const router = useRouter();
-    const userToken: any | null = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : null;
+    const storedUser: object | any = typeof window !== 'undefined' && localStorage.getItem('user');
+
+    const userToken: object | null = storedUser !== null
+        ? JSON.parse(storedUser)
+        : null;
 
     useEffect(() => {
         if (userToken === null) {

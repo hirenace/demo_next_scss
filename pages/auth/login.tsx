@@ -17,7 +17,11 @@ const Login = () => {
     // Destructuring object
     const { title, username_placeholder, password_placeholder, login_button_text } = globalMessages?.login_form;
 
-    const userToken: any | null = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : null;
+    const storedUser: object | string | any = typeof window !== 'undefined' && localStorage.getItem('user');
+
+    const userToken: any | null = storedUser !== null
+        ? JSON.parse(storedUser)
+        : null;
 
     if (userToken && !userToken?.token) {
         return router.push('/auth/login');
